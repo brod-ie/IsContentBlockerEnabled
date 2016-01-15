@@ -4,9 +4,9 @@ Source files for [the brief investigation][article] I did into determining wheth
 
 ### Quick start
 
-    1. Clone this repo to your Mac
-    2. Open `IsContentBlockerEnabled.xcodeproj` in Xcode
-    3. Build and run on device or simulator
+1. [Clone this repo](github-mac://openRepo/https://github.com/ryanbrodie/IsContentBlockerEnabled) to your Mac
+2. Open `IsContentBlockerEnabled.xcodeproj` in Xcode
+3. Build and run on device or simulator
 
 ### Thoughts and feedback
 
