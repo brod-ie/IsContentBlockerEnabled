@@ -1,6 +1,6 @@
 ## Is your app’s Safari Content Blocker enabled?
 
-Source files for [the brief investigation][article] I did into whether it was possible to determine the state of an app's Safari Content Blocker extension
+Source files for the brief investigation  [~~I wrote about on Medium~~][article] (out on 18/01) into whether it was possible to determine the state of an app's Safari Content Blocker extension
 
 ### Quick start
 
