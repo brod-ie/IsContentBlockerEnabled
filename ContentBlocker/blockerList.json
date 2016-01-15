@@ -1,0 +1,12 @@
+[
+    {
+        "action": {
+            "type": "css-display-none",
+            "selector": "#test"
+        },
+        "trigger": {
+            "if-domain": ["*rawgit.com"],
+            "url-filter": ".*"
+        }
+    }
+]

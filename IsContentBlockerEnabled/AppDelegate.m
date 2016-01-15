@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SafariServices/SafariServices.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,27 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [SFContentBlockerManager reloadContentBlockerWithIdentifier:@"ie.brod.IsContentBlockerEnabled.ContentBlocker" completionHandler: ^(NSError *error) {
+        if (error != nil) {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+    return YES;
+}
+
+// URL Scheme Handling
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    if ([[url host] isEqualToString:@"isEnabled"]) {
+        // Content Blocker is a go!
+        NSLog(@"✅ IT'S ENABLED!");
+    }
+    else if ([[url host] isEqualToString:@"isDisabled"]) {
+        // Nope, not enabled
+        NSLog(@"❌ Oh.. it's not");
+    }
+    
     return YES;
 }
 

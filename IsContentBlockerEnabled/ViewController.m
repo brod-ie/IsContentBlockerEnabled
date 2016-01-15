@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "SafariServices/SafariServices.h"
+#import "Config.h"
 
 @interface ViewController ()
 
@@ -16,7 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    // Init SFViewController with testPage.html endpoint
+    NSURL *url = [NSURL URLWithString:REDIRECT_TEST_PAGE_URL];
+    SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:url];
+    
+    // Commented out for debugging
+    // sfvc.view.hidden = YES;
+    
+    sfvc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    
+    // Present
+    [self presentViewController:sfvc animated:NO completion:^(){}];
+    
+    // And now, we wait..
+    // ⏰
 }
 
 - (void)didReceiveMemoryWarning {
