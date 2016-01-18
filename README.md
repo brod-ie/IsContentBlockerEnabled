@@ -10,7 +10,7 @@ Source files for the brief investigation [I wrote about on Medium][article] into
 
 ### Thoughts and feedback
 
-[Tweet them to me](twitter) or open [a new issue](issue)
+[Tweet them to me][twitter] or open [a new issue](issue)
 
 [article]: https://medium.com/@brod_ie/is-your-app-s-safari-content-blocker-enabled-c6df7e478b38#.hrz9xovzs
 [twitter]: https://twitter.com/@brod_ie
