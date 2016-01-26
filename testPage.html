@@ -1,0 +1,36 @@
+<!--
+
+    DON'T DO THIS HERE!
+    ===================
+
+    This file must be moved to an external server
+    and requested over HTTP
+  
+    (This repo is using RawGit as a temp fix)
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iOS Content Blocker Test Page</title>
+</head>
+<body>
+  <div id="test">Content Blocker Disabled</div>
+  
+  <script type="text/javascript">
+  (function() {
+    var element = document.getElementById('test'),
+    style = window.getComputedStyle(element),
+    display = style.getPropertyValue('display');
+    
+    if (display === "none") {
+      // Content Blocker Enabled
+      window.location = "MyContentBlockerApp://isEnabled";
+    } else {
+      window.location = "MyContentBlockerApp://isDisabled";
+    }
+  })();
+  </script>
+</body>
+</html>
